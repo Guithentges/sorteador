@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/logo.svg" alt="logo">
+    </div>
+    <section id="main">
+        <div class="main">
+            <div class="main-left">
+                <div class="header">
+                    <p>ONLINE - GRATUITO</p>
+                    <h1>SORTEADOR DE NUMEROS</h1>
+                </div>
+                <div class="questions">
+                    <div class="question">
+                        <img src="assets/perguntas.svg" alt="">
+                        <div class="questions-text">
+                            <h3>Como funciona o sorteador de números?</h3>
+                            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <img src="assets/perguntas.svg" alt="">
+                        <div class="questions-text">
+                            <h3>Posso escolher o intervalo dos números?</h3>
+                            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="title-form">
+                    <h2>QUERO SORTEAR:</h2>
+                    <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                </div>
+                <div class="result-title no-appear">
+                    <h3>RESULTADO DO SORTEIO</h3>
+                    <small>1° RESULTADO</small>
+                </div>
+                <div class="result no-appear">
+                    <div class="number-bg">
+                        <p>7</p>
+                    </div>
+                    <div class="number-bg">
+                        <p>77</p>
+                    </div>
+                    <div class="number-bg">
+                        <p>12</p>
+                    </div>
+                    <div class="number-bg">
+                        <p>2</p>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="numeros">
+                        <div class="form-number">
+                            <label for="qtd">NÚMEROS</label>
+                            <input type="number" name="qtd" id="qtd">
+                        </div>
+                        <div class="form-number">
+                            <label for="de">DE</label>
+                            <input type="number" name="de" id="de">
+                        </div>
+                        <div class="form-number">
+                            <label for="ate">ATÉ</label>
+                            <input type="number" name="ate" id="ate">
+                        </div>
+                    </div>
+                    <div class="toggle">
+                        <input type="checkbox" name="toggle" id="toggle">
+                        <label for="toggle">Não repetir número</label>
+                    </div>
+                        <div class="submit">
+                            <input type="submit" value="">
+                            <p>Sortear</p>
+                            <img src="assets/seta.svg" alt="">
+                            <img class="no-appear" src="assets/novamente.svg" alt="">
+                        </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+</html>
