@@ -370,7 +370,6 @@ input[type="number"]::-webkit-inner-spin-button,
         margin-left: 0;
     }
     .logodiv{
-        border: 1px solid blue;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -379,7 +378,6 @@ input[type="number"]::-webkit-inner-spin-button,
         width: 100%;
     }
     .main{
-        border: 1px solid red;
         width: 100%;
         height: 1000px;
         flex-direction: column;
