@@ -1,4 +1,5 @@
 const submit = document.querySelector('#submit')
+const divSubmit = document.querySelector('.submit')
 const numbersInput = document.querySelector('.numeros')
 const titleForm = document.querySelector('.title-form') 
 const toggleBtn = document.querySelector('#toggle-btn')
@@ -11,6 +12,7 @@ const qtd = document.querySelector('#qtd')
 const de = document.querySelector('#de')
 const ate = document.querySelector('#ate')
 const qtResult = document.querySelector('small')
+const submitMsg = document.querySelector('.submit p')
 let i = 0
 let r = 0
 
@@ -37,8 +39,14 @@ submit.addEventListener('click', (event) => {
         const noRepeat = toggleBtn.checked
         const numbers = generateRandomNumbers(from, to, quantity, noRepeat)
         result.classList.remove('no-appear')
+        let length = numbers.length
         if(i%2 == 1){
             r+=1
+            if(length > 5){
+                divSubmit.classList.add('space')
+            }
+        }else{
+            divSubmit.classList.remove('space')
         }
         for(let j = 0; j < numbers.length; j++){
             let sorteado = numbers[j]
@@ -46,15 +54,18 @@ submit.addEventListener('click', (event) => {
                 let numberBg = document.createElement('div')
                 result.append(numberBg)
                 numberBg.classList.add('number-bg')
+                numberBg.classList.add('appear')
                 let num = document.createElement('p')
+                num.classList.add('appearnum')
                 numberBg.append(num)
                 num.innerText = sorteado
                 qtResult.innerText = `${r}° RESULTADO`
+                submitMsg.innerText = 'Sortear novamente'
             }else{
                 result.classList.add('no-appear')
                 result.innerHTML = ''
+                submitMsg.innerText = 'Sortear'
             }
-            console.log(numbers)
         }
 })
 

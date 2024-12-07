@@ -31,8 +31,11 @@ body{
     opacity: 0;
 }
 
+.logodiv{
+    width: 100%;
+}
 .logo{
-    margin-left: 120px;
+    margin-left: 155px;
     margin-top: 76px;
     margin-bottom: 90px;
 }
@@ -45,14 +48,15 @@ body{
 }
 
 .main{
-    width: 1098px;
+    width: 1200px;
     height: 412px;
     display: flex;
     flex-direction: row;
+    gap: 115px;
 }
 
 .main-left{
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -108,11 +112,12 @@ body{
     position: relative;
     box-sizing: border-box;
     margin-block: auto;
-    width: 50%;
-    height: 75%;
+    width: 45%;
+    height: 80%;
 }
 
 .title-form{
+    margin-top: 20px;
     & h2{
         color: var(--content-primary);
         font-family: 'Roboto Flex', sans-serif;
@@ -132,6 +137,7 @@ body{
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    margin-bottom: .5rem;
     & h3{
         color: var(--content-primary);
         font-family: 'Roboto Flex', sans-serif;
@@ -143,11 +149,14 @@ body{
 }
 
 .result{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-evenly;
     gap: 17px;
     align-items: center;
-    margin-top: 2.5rem;
+    transition: all 1s ease;
+    padding-top: 40px;
     & p{
         color: var(--content-brand);
         font-family: 'Roboto Mono', sans-serif;
@@ -155,8 +164,8 @@ body{
         font-weight: bold;
     }
     & .number-bg{
-        width: 85px;
-        height: 85px;
+        width: 80px;
+        height: 80px;
         border-radius: 28px;
         z-index: -1;
         background-color: var(--background-primary);
@@ -174,7 +183,7 @@ form{
 
 .numeros {
     position: absolute;
-    top: 90px;
+    top: 120px;
     display: flex;
     flex-direction: row;
     gap: 16px;
@@ -222,7 +231,7 @@ input[type="number"]::-webkit-inner-spin-button,
 
 .toggle{
     position: absolute;
-    top: 170px;
+    top: 190px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -260,8 +269,7 @@ input[type="number"]::-webkit-inner-spin-button,
 .submit{
     position: absolute;
     bottom: 0px;
-    margin-top: 16px;
-    width: 548px;
+    width: 535px;
     height: 56px;
     color: var(--content-primary);
     background-color: var(--background-tertiary);
@@ -287,4 +295,158 @@ input[type="number"]::-webkit-inner-spin-button,
 .submit:hover{
     background-color: var(--background-primary);
     border: 2px solid var(--content-brand);
+}
+
+.appear{
+    animation: appear 3s linear forwards;
+}
+.appearnum{
+    animation: appearnum 3s linear forwards;
+}
+
+.space{
+    bottom: -80px;
+}
+
+@keyframes appear {
+    0% {
+        background-color: var(--content-brand);
+    }
+
+    25%{
+        transform: rotate(-90deg);
+        background-color: var(--content-brand);
+    }
+
+    50%{
+        transform: rotate(-180deg);
+        background-color: var(--content-brand);
+    }
+    75%{
+        transform: rotate(-360deg);
+        background-color: var(--content-brand);
+    }
+
+    100%{
+        transform: rotate(-360deg);
+        background-color: var(--background-primary);
+    }
+}
+
+@keyframes appearnum {
+    0%{
+        transform: rotate(0);
+        color: var(--background-primary);
+    }
+    25%{
+        transform: rotate(90deg);
+        color: var(--background-primary);
+    }
+    50%{
+        transform: rotate(180deg);
+        color: var(--background-primary);
+    }
+    75%{
+        transform: rotate(360deg);
+        color: var(--background-primary);
+    }
+    100%{
+        transform: rotate(360deg);
+        color: var(--content-brand);
+    }
+}
+
+
+@media screen and (width <= 768px){
+    * {
+        box-sizing: border-box;
+    }
+    body{
+        max-width: 100%;
+    }
+    .logo{
+        margin-top: 48px;
+        margin-bottom: 48px;
+        margin-left: 0;
+
+    }
+    .logodiv{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+    #main{
+        width: 300px;
+    }
+    .main{
+        width: 300px;
+        height: 1000px;
+        flex-direction: column;
+    }
+    .main-left{
+        justify-content: center;
+        width: 300px;
+    }
+    .main-right{
+        width: 300px;
+        margin-block: 0;
+    }
+    .questions{
+        margin-top: 500px;
+        width: 300px;
+    }
+    .submit{
+        width: 295px;
+        height: 56px;
+        top: -450px;
+    }
+    .header{
+        width: 300px;
+        & h1{
+            font-size: 40px;
+        }
+    }
+    .numeros{
+        top: -600px;
+        left: 20px;
+        width: 300px;
+    }
+    .form-number input{
+        width: 70px;
+    }
+    .title-form{
+        position: absolute;
+        top: -750px;
+    }
+    .toggle{
+        position: absolute;
+        width: 250px;
+        top: -525px;
+        & input{
+            width: 45%;
+            background-position: center;
+        }
+        & input:checked{
+            background-position: center;
+        }
+    }
+    .result-title{
+        position: absolute;
+        top: -750px;
+        left: 40px;
+    }
+    .result{
+        position: absolute;
+        top: -650px;
+        width: 300px;
+        flex-wrap: wrap;
+        & p{
+            font-size: 32px;
+        }
+        & .number-bg{
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+        }
+    }
 }
