@@ -398,7 +398,7 @@ input[type="number"]::-webkit-inner-spin-button,
         width: 350px;
         height: 56px;
         top: -450px;
-        left: 10px;
+        left: 15px;
     }
     .header{
         width: 100%;
@@ -434,13 +434,13 @@ input[type="number"]::-webkit-inner-spin-button,
     .result-title{
         position: absolute;
         top: -750px;
-        left: 55px;
+        left: 80px;
     }
     .result{
         position: absolute;
         top: -650px;
-        left: 0;
-        width: 100%;
+        left: 20px;
+        width: 90%;
         flex-wrap: wrap;
         & p{
             font-size: 32px;
